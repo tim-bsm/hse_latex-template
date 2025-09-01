@@ -2,8 +2,9 @@
 % LTeX: enabled=false
 
 
-% \savetable{<ID>}{<adjust_settings>}{<column_setting>}{<description>}{<content>}
+% \savetable[<OPTIONAL>]{<ID>}{<adjust_settings>}{<column_setting>}{<description>}{<content>}
 
+% OPTIONAL: width of table lines e.g. 2pt
 % adjust_settings: any settings for \begin{adjustbox} e.g. center
 % column_setting: any column settings for \begin{tabular} e.g. |c|c|c|c|c|c|
 % description: caption to show below the table
@@ -43,7 +44,7 @@
     \\\hline
 }
 
-\savetable{bsp_rotiert}{rotate=90, center}{|c|c|c|}{Rotierte Tabelle}{
+\savetable[2pt]{bsp_rotiert}{rotate=90, center}{|c|c|c|}{Rotierte Tabelle}{
     A & 10 & test
     \\\hline
     B & 20 & test
