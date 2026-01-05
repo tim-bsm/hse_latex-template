@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 &nbsp;
 
+## [1.2.1] - 2026-01-06
+
+### Fixed
+
+- Changed entry and format from `2024` to `2026` in the [bibliographie](/content/bibliographie.bib)
+
 ## [1.2.0] - 2026-01-05
 
 ### Changed
