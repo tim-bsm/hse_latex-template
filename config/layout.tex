@@ -48,35 +48,35 @@
     %% HEADER
     \fancyhead[L]{
         \ifshowcompanylogo
-            % Company logo and DHBW-Logo --> Company logo left
-            \ifshowdhbwlogo
+            % Company logo and HSE-Logo --> Company logo left
+            \ifshowhselogo
                 \iflang{de}{\companyDeL}
                 \iflang{en}{\companyEnL}
             % Only company logo --> \headerleft left
             \else
                 \vspace{0.5cm}\small \headerleft \vspace{0.08cm}
             \fi
-        % Only DHBW-Logo or no logo --> \headerleft left
+        % Only HSE-Logo or no logo --> \headerleft left
         \else
             \vspace{0.5cm}\small \headerleft \vspace{0.08cm}
         \fi
     }
     \fancyhead[R]{
         \ifshowcompanylogo
-            % Company logo and DHBW-Logo --> DHBW-Logo right
-            \ifshowdhbwlogo
-                \iflang{de}{\dhbwDe}
-                \iflang{en}{\dhbwEn}
+            % Company logo and HSE-Logo --> HSE-Logo right
+            \ifshowhselogo
+                \iflang{de}{\hseDe}
+                \iflang{en}{\hseEn}
             % Only company logo --> Company logo right
             \else
                 \iflang{de}{\companyDeR}
                 \iflang{en}{\companyEnR}
             \fi
         \else
-            % Only DHBW-Logo --> DHBW-Logo right
-            \ifshowdhbwlogo
-                \iflang{de}{\dhbwDe}
-                \iflang{en}{\dhbwEn}
+            % Only HSE-Logo --> HSE-Logo right
+            \ifshowhselogo
+                \iflang{de}{\hseDe}
+                \iflang{en}{\hseEn}
             \fi
         \fi
     }

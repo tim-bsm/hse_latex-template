@@ -1,4 +1,4 @@
-# LaTeX Template for the DHBW
+# LaTeX Template for the HSE
 
 ### To view a short example of the template, please look at [this PDF](document/document.pdf).
 
@@ -6,13 +6,14 @@
 
 ## Legal statement
 
-As already stated under [the license](LICENSE), I do NOT guarantee any correctness of this repository and thus this template. That means, using this template is at your own risk of something being wrong or not as stated in the guidelines of the DHBW.  
-That being said, I did develop this template with the [guidelines for the technical commission from october 2021](https://www.dhbw.de/fileadmin/user_upload/Dokumente/Dokumente_fuer_Studierende/191212_Leitlinien_Praxismodule_Studien_Bachelorarbeiten.pdf) in mind.
+As already stated under [the license](LICENSE), I do NOT guarantee any correctness of this repository and thus this template. That means, using this template is at your own risk of something being wrong or not as stated in the guidelines of the HSE.
+
+<!-- That being said, I did develop this template with the [guidelines for the technical commission from october 2021](https://www.dhbw.de/fileadmin/user_upload/Dokumente/Dokumente_fuer_Studierende/191212_Leitlinien_Praxismodule_Studien_Bachelorarbeiten.pdf) in mind. -->
 
 ## Development Environment
 
 To use this template optimally, it is best to use [MS Visual Studio Code](https://code.visualstudio.com) in combination with [JabRef](https://www.jabref.org).  
-To check for any new updates, please visit my [repository](https://github.com/tim-bsm/dhbw_latex-template).
+To check for any new updates, please visit my [repository](https://github.com/tim-bsm/hse_latex-template).
 
 ### Visual Studio Code
 
@@ -108,7 +109,7 @@ The same applies to [the acronyms file](/content/additionals/acronyms.tex) with 
 
 ### Found a problem with the template?
 
-If you think you found an issue caused by my template, please visit the [GitHub repository of this project](https://github.com/tim-bsm/dhbw_latex-template) and go to the [issues tab](https://github.com/tim-bsm/dhbw_latex-template/issues) to report your issue.
+If you think you found an issue caused by my template, please visit the [GitHub repository of this project](https://github.com/tim-bsm/hse_latex-template) and go to the [issues tab](https://github.com/tim-bsm/hse_latex-template/issues) to report your issue.
 
 &nbsp;
 

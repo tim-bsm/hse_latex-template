@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 &nbsp;
 
+## [1.1.0] - 2026-01-05
+
+### Changed
+
+- Changed template from DHBW to HSE
+
 ## [1.0.1] - 2026-01-05
 
 ### Changed

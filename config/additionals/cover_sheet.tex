@@ -6,9 +6,9 @@
 
 \begin{titlepage}
 
-% Depending on the settings, the company logo, the DHBW logo or both are displayed
+% Depending on the settings, the company logo, the HSE logo or both are displayed
 \ifshowcompanylogo
-	\ifshowdhbwlogo
+	\ifshowhselogo
 		% Both logos are displayed
 		\begin{minipage}[c]{0.43\textwidth}
 			\begin{center}
@@ -26,10 +26,10 @@
 		\begin{minipage}[c]{0.43\textwidth}
 			\begin{center}
 				\iflang{de}{
-					\includegraphics[width=\textwidth, right]{config/dhbw_de}
+					\includegraphics[width=\textwidth, right]{config/hse_de}
 				}
 				\iflang{en}{
-					\includegraphics[width=\textwidth, right]{config/dhbw_en}
+					\includegraphics[width=\textwidth, right]{config/hse_en}
 				}
 			\end{center}
 		\end{minipage}
@@ -45,14 +45,14 @@
 		\end{center}
 	\fi
 \else
-	\ifshowdhbwlogo
-		% Only the DHBW logo is displayed
+	\ifshowhselogo
+		% Only the HSE logo is displayed
 		\begin{center}
 			\iflang{de}{
-				\includegraphics[width=0.7\textwidth]{config/dhbw_de}
+				\includegraphics[width=0.7\textwidth]{config/hse_de}
 			}
 			\iflang{en}{
-				\includegraphics[width=0.7\textwidth]{config/dhbw_en}
+				\includegraphics[width=0.7\textwidth]{config/hse_en}
 			}
 		\end{center}
 	\fi
@@ -89,8 +89,8 @@
 	% Place further information of the paper
 	\vspace*{12mm}		\large\textbf\papertype\\
 	\vspace*{3mm}		\textbf\degree\\
-	\vspace*{12mm}		\langstudycourse\ \studycourse\\
-	\vspace*{3mm}		\langatthedhbw\ \unilocation\\
+	\vspace*{12mm}		\langstudycourse\ \textbf\studycourse\\
+	\vspace*{3mm}		\langatthe\ \textbf\uni\\
 	\vspace*{12mm}		\langby\\
 	\vspace*{3mm}		\large\textbf\authorstr\\
 	\vspace*{12mm}		\submissiondate\\
@@ -98,6 +98,9 @@
 
 % Create spacing
 \vfill
+
+% Show info on cover page about disabling todo notes until diasbled
+\todo{Disable TODO-notes in user\_\-settings.tex for final version.}
 
 % Lower part of the cover sheet (name, ...)
 \begin{spacing}{1.2}
