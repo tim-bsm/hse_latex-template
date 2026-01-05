@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 &nbsp;
 
+## [1.2.0] - 2026-01-05
+
+### Changed
+
+- Removed deprecated command `\tablerow{}` for tables defined in [tables.tex](/config/additionals/tables.tex). Use `content\\\hline` instead of `\tablerow{content}` (see [tables.tex](/content/additionals/tables.tex) for examples).
+
+### Added
+
+- Added link to HSE homepage in [README.md](/README.md)
+
 ## [1.1.0] - 2026-01-05
 
 ### Changed
