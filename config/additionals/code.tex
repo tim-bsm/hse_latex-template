@@ -11,6 +11,30 @@
 
 % Define own languages for listings
 \newcommand{\ownlstlanguages}{
+    \lstdefinelanguage{dockerfile}{
+        keywords={FROM, RUN, COPY, ADD, ENTRYPOINT, CMD,  ENV, ARG, WORKDIR, EXPOSE, LABEL, USER, VOLUME, STOPSIGNAL, ONBUILD, MAINTAINER, HEALTHCHECK},
+        keywordstyle=\color{blue}\bfseries,
+        identifierstyle=\color{black},
+        sensitive=false,
+        comment=[l]{\#},
+        commentstyle=\color{purple}\ttfamily,
+        stringstyle=\color{red}\ttfamily,
+        morestring=[b]',
+        morestring=[b]"
+    }
+
+    \lstdefinelanguage{docker-compose}{
+        keywords={image, environment, ports, container_name, ports, volumes, links},
+        keywordstyle=\color{blue}\bfseries,
+        identifierstyle=\color{black},
+        sensitive=false,
+        comment=[l]{\#},
+        commentstyle=\color{purple}\ttfamily,
+        stringstyle=\color{red}\ttfamily,
+        morestring=[b]',
+        morestring=[b]"
+    }
+
 	\lstdefinelanguage{ini}{
 		columns=fullflexible,
 		commentstyle=\color{gray}\ttfamily,
@@ -21,8 +45,18 @@
 		otherkeywords={=},
 		% otherkeywords={:},
 		keywordstyle={\color{red}\bfseries}
-	}	
+	}
 
+    \lstdefinelanguage{JavaScript}{
+		keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+		ndkeywords={class, export, boolean, throw, implements, import, this},
+		sensitive=false,
+		comment=[l]{//},
+		morecomment=[s]{/*}{*/},
+		morestring=[b]',
+		morestring=[b]"
+	}
+    
 	\lstdefinelanguage{JSON}{
 		commentstyle=\color{gray}\upshape,
 		stringstyle=\bfseries\color{Orchid},
@@ -57,16 +91,6 @@
 		morecomment=[s]{<?}{?>},
 		morecomment=[s]{<!--}{-->},
 		identifierstyle=\color{darkblue}
-	}
-
-	\lstdefinelanguage{JavaScript}{
-		keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
-		ndkeywords={class, export, boolean, throw, implements, import, this},
-		sensitive=false,
-		comment=[l]{//},
-		morecomment=[s]{/*}{*/},
-		morestring=[b]',
-		morestring=[b]"
 	}
 }
 
