@@ -7,11 +7,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 &nbsp;
 
+## [1.2.2] - 2026-02-14
+
+### Added
+
+- Added `dockerfile` and `docker-compose` language for code in [code.tex](/config/additionals/code.tex)
+
+### Changed
+
+- Changed folder structure in [code.tex](/content/additionals/code.tex) to use the chapter number instead of the code language (e. g. chapter-01/hello-world.cpp instead of cpp/hello-world.cpp) for better structure.
+
 ## [1.2.1] - 2026-01-06
 
 ### Fixed
 
-- Changed entry and format from `2024` to `2026` in the [bibliographie](/content/bibliographie.bib)
+- Changed entry and format from `2024` to `2026` in the [bibliographie.bib](/content/bibliographie.bib)
 
 ## [1.2.0] - 2026-01-05
 
