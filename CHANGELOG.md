@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 &nbsp;
 
+## [1.3.1] - 2026-02-22
+
+### Changed
+
+- Vertical centered text in tables
+
 ## [1.3.0] - 2026-02-22
 
 ### Changed
