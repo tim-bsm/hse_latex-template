@@ -11,40 +11,47 @@
 
 % Define own languages for listings
 \newcommand{\ownlstlanguages}{
+    % Define colors:
+    \newcommand{\ownStyleText}{\color{black}}
+    \newcommand{\ownStyleKeyword}{\color{blue}}
+    \newcommand{\ownStyleString}{\color{Orchid}}
+    \newcommand{\ownStyleComment}{\color{gray}\ttfamily}
+
+
     \lstdefinelanguage{dockerfile}{
         keywords={FROM, RUN, COPY, ADD, ENTRYPOINT, CMD,  ENV, ARG, WORKDIR, EXPOSE, LABEL, USER, VOLUME, STOPSIGNAL, ONBUILD, MAINTAINER, HEALTHCHECK},
-        keywordstyle=\color{blue}\bfseries,
-        identifierstyle=\color{black},
+        keywordstyle=\bfseries\ownStyleKeyword,
+        identifierstyle=\ownStyleText,
         sensitive=false,
         comment=[l]{\#},
-        commentstyle=\color{gray}\ttfamily,
-        stringstyle=\color{red}\ttfamily,
+        commentstyle=\ownStyleComment,
+        stringstyle=\ttfamily\ownStyleString,
         morestring=[b]',
         morestring=[b]"
     }
 
     \lstdefinelanguage{docker-compose}{
         keywords={image, environment, ports, container_name, ports, volumes, links},
-        keywordstyle=\color{blue}\bfseries,
-        identifierstyle=\color{black},
+        keywordstyle=\bfseries\ownStyleKeyword,
+        identifierstyle=\ownStyleText,
         sensitive=false,
         comment=[l]{\#},
-        commentstyle=\color{gray}\ttfamily,
-        stringstyle=\color{red}\ttfamily,
+        commentstyle=\ownStyleComment,
+        stringstyle=\ttfamily\ownStyleString,
         morestring=[b]',
         morestring=[b]"
     }
 
 	\lstdefinelanguage{ini}{
 		columns=fullflexible,
-		commentstyle=\color{gray}\ttfamily,
-		morecomment=[s][\color{Orchid}\bfseries]{[}{]},
+		commentstyle=\ownStyleComment,
+		morecomment=[s][\ownStyleString\bfseries]{[}{]},
 		morecomment=[l]{\#},
 		morecomment=[l]{;},
 		morekeywords={},
 		otherkeywords={=},
 		% otherkeywords={:},
-		keywordstyle={\color{red}\bfseries}
+		keywordstyle={\ownStyleKeyword\bfseries}
 	}
 
     \lstdefinelanguage{JavaScript}{
@@ -56,42 +63,65 @@
 		morestring=[b]',
 		morestring=[b]"
 	}
-    
+
+    \newcommand{\JSONliteratestyle}{\bfseries\ownStyleString}
 	\lstdefinelanguage{JSON}{
-		commentstyle=\color{gray}\upshape,
-		stringstyle=\bfseries\color{Orchid},
+		commentstyle=\ownStyleComment,
+		stringstyle=\ownStyleText,
 		string=[s]{"}{"},
 		comment=[l]{//},
 		morecomment=[s]{/*}{*/},
-		delim=[l][\bfseries\color{darkblue}]{:\ "},
-		moredelim=[l][\bfseries\color{darkblue}]{:"},
-		identifierstyle=\color{darkblue},
+		delim=[l][\ownStyleKeyword]{:\ "},
+		moredelim=[l][\ownStyleKeyword]{:"},
+		identifierstyle=\ownStyleKeyword,
 		literate=
-			*{0}{{{\bfseries\color{cyan}0}}}{1}
-			{1}{{{\bfseries\color{cyan}1}}}{1}
-			{2}{{{\bfseries\color{cyan}2}}}{1}
-			{3}{{{\bfseries\color{cyan}3}}}{1}
-			{4}{{{\bfseries\color{cyan}4}}}{1}
-			{5}{{{\bfseries\color{cyan}5}}}{1}
-			{6}{{{\bfseries\color{cyan}6}}}{1}
-			{7}{{{\bfseries\color{cyan}7}}}{1}
-			{8}{{{\bfseries\color{cyan}8}}}{1}
-			{9}{{{\bfseries\color{cyan}9}}}{1}
+			*{0}{{{\JSONliteratestyle 0}}}{1}
+			{1}{{{\JSONliteratestyle 1}}}{1}
+			{2}{{{\JSONliteratestyle 2}}}{1}
+			{3}{{{\JSONliteratestyle 3}}}{1}
+			{4}{{{\JSONliteratestyle 4}}}{1}
+			{5}{{{\JSONliteratestyle 5}}}{1}
+			{6}{{{\JSONliteratestyle 6}}}{1}
+			{7}{{{\JSONliteratestyle 7}}}{1}
+			{8}{{{\JSONliteratestyle 8}}}{1}
+			{9}{{{\JSONliteratestyle 9}}}{1}
 	}
 	
+    \newcommand\XMLdelimstyle{\bfseries\ownStyleString}
 	\lstdefinelanguage{XML}{
 		columns=fullflexible,
-		commentstyle=\color{gray}\upshape,
-		stringstyle=\color{black},
+		commentstyle=\ownStyleComment,
+		stringstyle=\ownStyleKeyword,
 		morestring=[b]",
-		moredelim=[s][\bfseries\color{Orchid}]{<}{\ },
-		moredelim=[s][\bfseries\color{Orchid}]{</}{>},
-		moredelim=[l][\bfseries\color{Orchid}]{/>},
-		moredelim=[l][\bfseries\color{Orchid}]{>},
+		moredelim=[s][\XMLdelimstyle]{<}{\ },
+		moredelim=[s][\XMLdelimstyle]{</}{>},
+		moredelim=[l][\XMLdelimstyle]{/>},
+		moredelim=[l][\XMLdelimstyle]{>},
 		morecomment=[s]{<?}{?>},
 		morecomment=[s]{<!--}{-->},
-		identifierstyle=\color{darkblue}
+		identifierstyle=\ownStyleText
 	}
+
+    % https://github.com/GothenburgBitFactory/guides/blob/master/20151107_de_openrheinruhr/yaml_syntax_highlighting.tex
+    \newcommand\YAMLvaluestyle{\ownStyleKeyword}
+    \lstdefinelanguage{YAML}{
+        keywords={true,false,null,y,n},
+        keywordstyle=\color{darkgray},%\bfseries,
+        sensitive=false,
+        comment=[l]{\#},
+        morecomment=[s]{/*}{*/},
+        commentstyle=\ownStyleComment,
+        stringstyle=\YAMLvaluestyle,
+        moredelim=[l][\color{orange}]{\&},
+        moredelim=[l][\color{magenta}]{*},
+        moredelim=**[il][\ownStyleText{:}\YAMLvaluestyle]{:},   % switch to value style at :
+        morestring=[b]',
+        morestring=[b]",
+        literate =    {---}{{\ProcessThreeDashes}}3
+                        {>}{{\textcolor{red}\textgreater}}1     
+                        {|}{{\textcolor{red}\textbar}}1 
+                        {\ -\ }{{ -\ }}3,
+    }
 }
 
 % Define the default style of the listings

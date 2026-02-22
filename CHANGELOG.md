@@ -1,3 +1,5 @@
+<!-- LTeX: enabled=false -->
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
@@ -6,6 +8,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 &nbsp;
+
+## [1.2.3] - 2026-02-22
+
+### Added
+
+- Added further information regarding acronyms and their plural
+- Deactivated LTeX spelling check for the Markdown files
+- Added package `textgreek` to use greek letters in text mode (e.g. \textalpha)
+- Added YAML syntax highlighting for code
+
+### Changed
+
+- Matched code syntax highlighting to same colors
 
 ## [1.2.2] - 2026-02-14
 

@@ -1,3 +1,5 @@
+<!-- LTeX: enabled=false -->
+
 # LaTeX Template for the [HSE](https://www.hs-esslingen.de)
 
 ### To view a short example of the template, please look at [this PDF](document/document.pdf).
