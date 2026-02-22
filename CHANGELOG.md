@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 &nbsp;
 
+## [1.3.0] - 2026-02-22
+
+### Changed
+
+- Rewrote [`tables.tex`](/config/additionals/tables.tex) wrapper to use `tabularx` to better format table for with and line breaks
+
 ## [1.2.3] - 2026-02-22
 
 ### Added
